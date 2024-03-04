@@ -1,0 +1,6 @@
+enable_testing()
+find_package(GTest REQUIRED)
+include(GoogleTest)
+add_executable(unittests unit.cpp)
+target_link_libraries(unittests itsaunit GTest::GTest GTest::Main)
+gtest_discover_tests(unittests)
