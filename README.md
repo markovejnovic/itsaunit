@@ -20,6 +20,6 @@ brief...
 itsaunit::Metre distance1 { 1 };
 const auto distance2 = 2_m;
 const auto time_sq = 2_s * 2_s;
-ASSERT_EQ("1ms⁻²", itsaunit::to_string((distance1 + distance2) / time_sq));
-ASSERT_EQ("1ms^(-2)", itsaunit::to_string</* Pretty = */ false>((distance1 + distance2) / time_sq));
+ASSERT_EQ("0.6666666ms⁻²", itsaunit::to_string((distance1 + distance2) / time_sq));
+ASSERT_EQ("0.6666666ms^(-2)", itsaunit::to_string</* Pretty = */ false>((distance1 + distance2) / time_sq));
 ```
